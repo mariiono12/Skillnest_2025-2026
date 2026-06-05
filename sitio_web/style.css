@@ -1,0 +1,69 @@
+/* Estilos generales para el fondo de la página y la tipografía */
+body {
+    background-color: #f0f4f8;
+    font-family: sans-serif;
+    padding: 40px;
+}
+
+/* Tarjeta blanca de fondo que emula la imagen de referencia */
+.contenedor-sitio {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Efecto llamativo para el h1 usando el tip obligatorio de las instrucciones */
+.titulo-principal {
+    color: #1e293b;
+    font-size: 28px;
+    margin-bottom: 5px;
+    text-decoration: underline wavy #3498db; /* Subrayado ondulado llamativo */
+}
+
+.subtitulo {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.subtitulo a {
+    color: #0284c7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Contenedor que alinea las tres cajas en una sola fila */
+.seccion-bloques {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Estilo base y común para las tres cajas (Usa text-align: center) */
+.caja-color {
+    flex: 1;
+    padding: 25px 15px;
+    border-radius: 8px;
+    text-align: center; /* Centrado de texto requerido */
+    color: #ffffff;    /* Texto blanco para que contraste bien */
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Colores específicos utilizando variaciones atractivas de los nombres solicitados */
+.azul {
+    background-color: #0284c7; /* Variación llamativa de 'navy' o azul */
+}
+
+.roja {
+    background-color: #ef4444; /* Variación atractiva de rojo */
+}
+
+.verde {
+    background-color: #00b060; /* Variación estilo 'lightseagreen' / verde éxito */
+}

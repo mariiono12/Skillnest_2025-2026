@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Primer Portafolio Web</title>
+</head>
+<body>
+
+    <h1>¡Hola! Soy [Tu Nombre]</h1>
+
+    <nav>
+        <a href="#section_proyectos">Mis proyectos</a> | 
+        <a href="https://github.com" target="_blank">Mi GitHub</a> | 
+        <a href="#contacto-seccion">Contáctame</a>
+    </nav>
+
+    <h2>Sobre mí</h2>
+    <p>Soy estudiante de programación y me encanta aprender nuevas tecnologías.</p>
+
+    <h2>Habilidades e intereses</h2>
+    <ul>
+        <li>Programación en Python</li>
+        <li>Desarrollo Web</li>
+        <li>Videojuegos</li>
+        <li>Diseño UX/UI</li>
+    </ul>
+
+    <h2 id="section_proyectos">Proyectos destacados</h2>
+    
+    <h3>Calculadora en Python</h3>
+    <p>Una calculadora simple creada con Python y ejecutada en consola.</p>
+
+    <h2 id="contacto-seccion">Contáctame</h2>
+
+    <form action="#" method="POST">
+        
+        <p>
+            <label for="input_nombre">Nombre:</label>
+            <input id="input_nombre" type="text" name="nombre_usuario">
+        </p>
+
+        <p>
+            <label for="user_email">Correo electrónico:</label>
+            <input type="text" name="correo" id="user_email">
+        </p>
+
+        <p>
+            <label for="txt_mensaje">Mensaje:</label><br>
+            <textarea name="mensaje" id="txt_mensaje" rows="5" cols="40"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+
+    </form>
+
+</body>
+</html>
