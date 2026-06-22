@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(25, 42, 56);
+    color:blue
+    line-height 1.6;
+    }
+
+header {
+    background:linear-gradient(120deg, purple 25%, blue 75%)
+    padding 50px 20px 40px;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+nav {
+    background-color: rgb(71, 95, 145);
+    padding: 16px 20px;
+    border-bottom: 1px solid rgb(150, 203, 221);
+    box-shadow: 0 2px 8px rgba( 0, 0, 0, 0.04);
+}
+
+nav ul {
+    list-style: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: slategray;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 18px;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+nav ul li a:hover {
+    color: darkslategray;
+}
+
+nav ul li:not(:last-child)::after {
+    content: "|";
+    color: #dce1e8;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+/* ========================================
+   🧩 MAIN - Sección de introducción
+   ======================================== */
+
+/* El main es el contenedor principal */
+main {
+    max-width: 1100px;
+    margin: 45px auto 40px;
+    padding: 0 20px;
+}
+
+/* 
+   La intro tiene un borde lateral de color
+   Lo vi en un diseño y me gustó
+*/
+.intro {
+    background: #ffffff;
+    padding: 48px 40px 42px;
+    border-radius: 14px;
+    margin-bottom: 45px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    border-left: 6px solid #6c5ce7;
+    text-align: center;
+}
+
+.intro h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #5d6d7e;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* ========================================
+   📦 TRES BLOQUES - Feature Cards
+   ======================================== */
+
+/* Flexbox para alinear los tres bloques horizontalmente */
+.features {
+    display: flex;
+    gap: 30px;
+    margin-top: 5px;
+}
+
+/* Cada tarjeta tiene el mismo tamaño gracias a flex:1 */
+.feature-card {
+    background: #ffffff;
+    padding: 32px 28px 30px;
+    border-radius: 14px;
+    flex: 1;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #edf0f5;
+    text-align: center;
+}
+
+/* Pequeño efecto al pasar el mouse */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.feature-card h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #5d6d7e;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   📱 RESPONSIVE - Para móviles y tablets
+   ======================================== */
+
+/* 
+   En pantallas pequeñas, los bloques se apilan
+   y los enlaces de navegación se vuelven columna
+*/
+@media (max-width: 768px) {
+    header {
+        padding: 40px 20px 32px;
+    }
+    
+    header h1 {
+        font-size: 2.4rem;
+    }
+    
+    .slogan {
+        font-size: 0.95rem;
+    }
+    
+    .intro {
+        padding: 32px 25px;
+    }
+    
+    .intro h2 {
+        font-size: 1.7rem;
+    }
+    
+    .intro p {
+        font-size: 1rem;
+    }
+    
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .feature-card {
+        padding: 28px 20px;
+    }
+    
+    /* 
+       En móvil los enlaces ocupan todo el ancho
+       y los separadores desaparecen
+    */
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 12px 15px;
+        border-radius: 6px;
+    }
+    
+    nav ul li a:hover {
+        background: #f0f2f5;
+    }
+    
+    nav ul li:not(:last-child)::after {
+        content: "";
+        display: none;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .intro h2 {
+        font-size: 1.4rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffffff 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #2d3436;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;  /* Centra las imágenes horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    gap: 25px;               /* Espacio entre imágenes */
+    padding: 15px 0;         /* Espacio interno arriba/abajo */
+    margin-bottom: 30px;     /* Espacio entre filas */
+    flex-wrap: wrap;         /* Permite que las imágenes se envuelvan */
+}
+
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Cada tarjeta contiene una imagen */
+.image-card {
+    flex: 0 0 auto;          /* No crece, no se encoge, tamaño automático */
+    width: 200px;            /* Ancho fijo para todas */
+    height: 200px;           /* Alto fijo para todas */
+    border-radius: 16px;     /* Esquinas redondeadas */
+    overflow: hidden;        /* Oculta el contenido que sobresale */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+    border: 3px solid #ffffff;
+}
+
+/* Efecto al pasar el mouse */
+.image-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.image-card img {
+    width: 100%;            /* Ancho completo */
+    height: 100%;           /* Alto completo */
+    object-fit: cover;      /* La imagen cubre todo el espacio sin deformarse */
+    display: block;         /* Elimina espacio extra debajo de la imagen */
+    transition: transform 0.3s ease;
+}
+
+
+.image-card:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .image-card {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .row {
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .container {
+        padding: 25px 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .row {
+        justify-content: center;  /* Centra en móvil */
+        gap: 15px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+    
+    .image-card {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .image-card {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .row {
+        gap: 12px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+.row:nth-child(1) .image-card {
+    border-color: #ffffff;
+}
+
+.row:nth-child(2) .image-card {
+    border-color: #ffffff;
+}
+
+.row:nth-child(3) .image-card {
+    border-color: #ffffff;
+}
+
+
+
