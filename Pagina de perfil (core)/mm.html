@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <!-- /*aqui debo colocar el boostrap para cada uno de los íoconos*/*-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="mm.css">
+</head>
+<body>
+    <!-- /*aqui si no mal recuerdo deberia ir el header, osea la informacion del perfil*/*-->
+    <div class="header-container">
+        <h1><i class="person-circulo"></i>Perfil</h1>
+        
+        <div class="info-perfil">
+        <img src="" alt="Jane Doe">
+        <div class="datos">
+            <h2>Jane Doe</h2>
+            <p class="ubicacion">Bergen, Noruega</p>
+            <p class="cargo">Desarrolla Frontend</p>
+            <p class="bailidades/skills">Conocimientos en HTML, CSS, Javascript</p>
+        </div>            
+        <button class="Editar">Editar perfil</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<nav><!-- ahora se supone que aqui debo empezar con el nav(navegacion, Esta fuera del header)*-->
+    <ul>
+        <li><a href="#" class="active">Inicio</a></li>
+
+        <li><a href="#">Mi perfil</a></li>
+        <li><a href="#">Conexiones</a></li>
+        <li><a href="#">Cerrar sesión</a></li>
+    </ul>
+</nav>
+
+<!-- /*Main(Contenido prinxipal)*-->
+<main>
+    <section class="solicitudes">
+        <h3>solicitudes de conexión
+        <a href="#" class="ver todas">Ver todas</a>
+        </h3>
+        <ul class="Lista de usuarios">
+            <li>
+                <img src="" alt="Steve Jobs">
+                <span class="nombre">Steve Jobs</span>
+                <button class="agregar"><i class="bi bi-check"></i></button>
+                <button class="no agregar"><i class="bi bi-x"></i></button>
+            </li>
+            <li>
+                <img src="" alt="Bill Gates">
+                <span class="nombre">Bill Gates</span>
+                <button class="agregar"><i class="bi bi-check"></i></button>
+                <button class="no agregar"><i class="bi bi-x"></i></button>
+            </li>
+        </ul>
+    </section>
+     
+    <aside class="Conexiones">
+        <h3>Tus Conexiones <a href="#" class="ver todas"></a></h3>
+        <ul class="Lista de personas">
+            <li>
+                <img src="" alt="Richard Stallman">
+                <span class="nombre">Richard Stallman</span>
+            </li>
+            <li>
+                <img src="" alt="Linus Torvalds">
+                <span class="nombre">Linus Torvalds</span>
+            </li>
+            <li>
+                <img src="" alt="Ada Lovelace">
+                <span class="nombre">Ada Lovelace</span>
+            </li>
+            <li>
+                <img src="" alt="Grace Hopper">
+                <span class="nombre">Grace Hopper</span>
+            </li>
+        </ul>
+    </aside>
+</main>

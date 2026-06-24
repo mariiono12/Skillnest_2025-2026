@@ -1,0 +1,479 @@
+/* 
+
+
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background: #f0f2f5;
+    color: #1a1a2e;
+    line-height: 1.6;
+    padding-top: 0;
+}
+
+
+header {
+    background: #ffffff;
+    padding: 20px 30px 18px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid #e8ecf1;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+*/
+header h1 {
+    font-size: 1.5rem;
+    color: #1a1a2e;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+header h1 i {
+    color: #6c5ce7;
+}
+
+
+*/
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 0 8px;
+    border-top: 1px solid #e8ecf1;
+}
+
+/*
+   La imagen de perfil
+   border-radius: 50% la hace circular
+   object-fit: cover hace que la imagen se ajuste sin deformarse
+   El borde morado le da un toque de color
+*/
+.perfil-info img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6c5ce7;
+    flex-shrink: 0;
+    /* 
+       flex-shrink: 0 evita que la imagen se encoja
+       cuando no hay espacio suficiente
+    */
+}
+
+/*
+   Los datos del perfil están en columna
+   gap: 2px da poco espacio entre líneas
+*/
+.perfil-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    
+}
+
+.perfil-datos h2 {
+    font-size: 1.3rem;
+    color: #1a1a2e;
+    font-weight: 700;
+}
+
+.perfil-datos .ubicacion {
+    font-size: 0.85rem;
+    color: #636e72;
+}
+
+.perfil-datos .ubicacion i {
+    margin-right: 4px;
+    color: #6c5ce7;
+}
+
+.perfil-datos .cargo {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6c5ce7;
+}
+
+.perfil-datos .skills {
+    font-size: 0.82rem;
+    color: #636e72;
+}
+
+
+
+/*
+   margin-left: auto lo empuja a la derecha
+   porque el contenedor padre tiene display: flex
+   border-radius: 50px lo hace completamente redondeado
+   transition: all anima todas las propiedades
+*/
+.btn-editar {
+    margin-left: auto;
+    background: #6c5ce7;
+    color: #ffffff;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    /* white-space: nowrap evita que el texto se rompa en dos líneas */
+}
+
+.btn-editar:hover {
+    background: #5a4bd1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 18px rgba(108, 92, 231, 0.35);
+}
+
+.btn-editar:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 10px rgba(108, 92, 231, 0.2);
+}
+
+
+*/
+nav {
+    background: #ffffff;
+    padding: 0 30px;
+    border-bottom: 1px solid #e8ecf1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+/*
+   El contenedor de la navegación es el mismo
+   que el del header para mantener consistencia
+*/
+nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    gap: 0;
+    padding: 0;
+}
+
+/*
+   Cada elemento de la lista tiene un padding
+   para que el área clickeable sea más grande
+*/
+nav ul li {
+    display: inline-block;
+}
+
+/*
+   Los enlaces tienen padding para ser clickeables
+   display: flex para alinear el ícono y el texto
+   gap: 6px separa el ícono del texto
+*/
+nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 20px;
+    color: #4a4a6a;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border-bottom: 3px solid transparent;
+    
+}
+
+
+nav ul li a.active {
+    color: #6c5ce7;
+    border-bottom-color: #6c5ce7;
+}
+
+
+nav ul li a:hover:not(.active) {
+    color: #6c5ce7;
+    background: #f8f7ff;
+}
+
+
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    align-items: start;
+}
+
+
+.solicitudes,
+.conexiones {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 22px 25px 25px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.3s ease;
+}
+
+
+.solicitudes:hover,
+.conexiones:hover {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+.solicitudes h3,
+.conexiones h3 {
+    font-size: 1.05rem;
+    color: #1a1a2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+/*
+   El enlace "Ver todas" es pequeño y morado
+*/
+.ver-todas {
+    font-size: 0.8rem;
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.ver-todas:hover {
+    color: #5a4bd1;
+    text-decoration: underline;
+}
+
+
+.lista-personas {
+    list-style: none;
+}
+
+/*
+   Cada persona en la lista usa flex para
+   alinear imagen, nombre y botón
+   padding: 10px 0 da espacio arriba y abajo
+   border-bottom separa cada elemento
+*/
+.lista-personas li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+/*
+   El último elemento no tiene borde inferior
+*/
+.lista-personas li:last-child {
+    border-bottom: none;
+}
+
+/*
+   Las imágenes de perfil son circulares
+*/
+.lista-personas img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+.lista-personas .nombre {
+    font-weight: 500;
+    color: #1a1a2e;
+    font-size: 0.92rem;
+}
+
+
+
+.btn-agregar {
+    margin-left: auto;
+    background: #f0f2f5;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #6c5ce7;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.btn-agregar:hover {
+    background: #6c5ce7;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.btn-agregar:active {
+    transform: scale(0.95);
+}
+
+
+/*
+   Cuando la pantalla es más pequeña que 768px
+   (tablets y móviles)
+*/
+@media (max-width: 768px) {
+    /* El header se vuelve más compacto */
+    header {
+        padding: 15px 18px 12px;
+    }
+    
+    header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    /*
+       El perfil-info se apila verticalmente
+       y el botón "Editar perfil" se centra
+    */
+    .perfil-info {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .perfil-datos {
+        align-items: center;
+        flex: 1 1 100%;
+        /* flex: 1 1 100% hace que ocupe toda la fila */
+    }
+    
+    .btn-editar {
+        margin: 0 auto;
+        padding: 6px 18px;
+        font-size: 0.8rem;
+    }
+    
+    /* La navegación se vuelve horizontal con scroll */
+    nav {
+        padding: 0 15px;
+        overflow-x: auto;
+        /* overflow-x: auto permite scroll horizontal si es necesario */
+    }
+    
+    nav ul {
+        gap: 0;
+        flex-wrap: nowrap;
+    }
+    
+    nav ul li a {
+        padding: 12px 14px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    
+    /* Las dos columnas se vuelven una sola */
+    main {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        margin: 20px auto;
+        gap: 20px;
+    }
+    
+    .solicitudes,
+    .conexiones {
+        padding: 18px 18px 20px;
+    }
+    
+    .solicitudes h3,
+    .conexiones h3 {
+        font-size: 0.95rem;
+    }
+}
+
+/*
+   Para móviles muy pequeños 
+*/
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.1rem;
+    }
+    
+    .perfil-info img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .perfil-datos h2 {
+        font-size: 1.1rem;
+    }
+    
+    .perfil-datos .cargo {
+        font-size: 0.8rem;
+    }
+    
+    .perfil-datos .skills {
+        font-size: 0.75rem;
+    }
+    
+    nav ul li a {
+        padding: 10px 12px;
+        font-size: 0.75rem;
+    }
+    
+    nav ul li a i {
+        font-size: 0.85rem;
+    }
+    
+    .lista-personas li {
+        padding: 8px 0;
+    }
+    
+    .lista-personas img {
+        width: 34px;
+        height: 34px;
+    }
+    
+    .lista-personas .nombre {
+        font-size: 0.85rem;
+    }
+    
+    .btn-agregar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+}
+
