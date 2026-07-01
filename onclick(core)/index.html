@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--autor-->
+    <meta name="author" content="sergiobustos@liceovvh.cl">
+    <!--css-->
+    <link rel="stylesheet" href="static/css/si.css">
+    <title>Onclick(core)</title>
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+
+    <!---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aubrey&display=swap" rel="stylesheet">
+
+    <!---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+
+    <!--boots-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- barra navegacion -->
+    <nav>
+        <div class="nav-container">
+            <h1 style="font-family:Georgia, 'Times New Roman', Times, serif ;">Social Blog</h1>
+            <input type="text" placeholder="buscar publicaciones...">
+            <button id="sesion" onclick="Sesion()">iniciar sesion</button>
+
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="column-1">
+
+                <!-- card 1 -->
+                <div class="card-main">
+                    <h2 style="font-family:sans-serif;">Fundamentos de JavaScript</h2>
+                    <p>
+                        <strong>Publicado Por:</strong>
+                        Carlos Alvaréz
+                    </p>
+                    <p>
+                        <strong>Fecha:</strong>
+                        02/03/2025
+                    </p>
+                    <p>JavaScript es un lenguaje de programación que se utiliza en el desarrollo web. Aprende los
+                        conceptos
+                        básicos para comenzar a programar.</p>
+                    <button onclick="darLike()">
+                        <span id="like">0</span>
+                        <i class="bi bi-hand-thumbs-up-fill"></i></button>
+                </div>
+
+                <!-- card 2 -->
+                <div class="card-main">
+                    <h2 style="font-family: sans-serif;">Aprende a diseñar con CSS</h2>
+                    <p>
+                        <strong>Publicado Por:</strong>
+                        Ana Gómez
+                    </p>
+                    <p>
+                        <strong>Fecha:</strong>
+                        01/03/2025
+                    </p>
+                    <p>El diseño web es una parte fundamental en el desarrollo de aplicaciones web. Conoce las
+                        propiedades de CSS para crear interfaces atractivas.</p>
+
+                    <button onclick="darLike1()">
+                        <span id="likes">0</span>
+                        <i class="bi bi-hand-thumbs-up-fill"></i></button>
+                </div>
+            </div>
+
+            <!-- bienevenido -->
+            <div class="column-2">
+                <div class="row-2">
+                    <!-- card3 -->
+                    <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">¡Bienvenido!</h2>
+                    <p>Explora nuevas publicaciones y conecta con otros usuarios.</p>
+                    <button onclick="perfil()">Ver Perfíl</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--script.js-->
+    <script src="static/js/scri.js"></script>
+</body>
+
+</html>
