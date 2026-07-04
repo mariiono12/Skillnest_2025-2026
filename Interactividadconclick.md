@@ -90,3 +90,65 @@ Existen diferentes maneras de agregar eventos en JavaScript, pero addEventListen
 📁 Separa la lógica del HTML, manteniendo el código más limpio.
 ⚙️ Es más flexible para agregar o remover eventos dinámicamente.
 Copia y pega cada archivo en un editor de código o en tu entorno de desarrollo y abre el archivo index.html en tu navegador. Cada vez que hagas clic en el botón, el fondo cambiará de color aleatoriamente
+
+Seleccionar con querySelector
+🎯 Objetivo
+Comprender el uso del método querySelector en JavaScript para seleccionar y manipular elementos del DOM, aplicando selectores similares a los de CSS para modificar el contenido y la apariencia de una página web de manera dinámica.
+
+🔍 Seleccionando elementos en JavaScript
+En CSS, usas selectores para aplicar estilos a los elementos de una página web. Pero, ¿sabías que puedes usar los mismos selectores en JavaScript para manipular elementos en el DOM? Aquí es donde entra document.querySelector.
+
+Con querySelector, puedes seleccionar cualquier elemento HTML utilizando los mismos selectores que ya conoces de CSS, como #id, .clase o etiquetas como h1, p, div, etc.
+
+❓ ¿Cómo funciona querySelector?
+Supongamos que tienes este código en tu archivo HTML:
+
+<h1 id="title">¡Hola, mundo!</h1>
+Para seleccionar este título desde JavaScript, puedes hacer lo siguiente:
+
+let title = document.querySelector("#title");
+console.log(title); // <h1 id="title">¡Hola, mundo!</h1>
+Como ves, querySelector(“#title”) encuentra el elemento con el id title, exactamente igual que en CSS. También puedes seleccionar el mismo elemento usando su etiqueta:
+
+let h1 = document.querySelector("h1");
+console.log(h1); // <h1 id="title">¡Hola, mundo!</h1>
+Ambas líneas seleccionan el mismo elemento, pero la primera usa un id, mientras que la segunda usa el nombre de la etiqueta.
+
+🧩 Combinando selectores
+Puedes combinar selectores para ser más específico. Por ejemplo, imagina que tienes una barra de navegación con una imagen y un título:
+
+<div class="nav">
+    <img src="logo.png" alt="logo">
+    <h1>Bienvenido</h1>
+</div>
+Si quieres seleccionar solo la imagen dentro de .nav, puedes hacer:
+
+let logoImg = document.querySelector(".nav img");
+console.log(logoImg); // <img src="logo.png" alt="logo">
+Aquí, .nav img selecciona la primera imagen dentro de un elemento con la clase nav.
+
+☝️ querySelector solo devuelve el primer elemento
+Si usas querySelector en un documento con varios elementos que coincidan con el selector, solo obtendrás el primero. Por ejemplo:
+
+<p class="texto">Este es el primer párrafo.</p>
+<p class="texto">Este es el segundo párrafo.</p>
+Si intentas seleccionar .texto:
+
+let parrafo = document.querySelector(".texto");
+console.log(parrafo.textContent); // "Este es el primer párrafo."
+Como puedes ver, aunque hay dos elementos con la clase .texto, solo devuelve el primero. Si necesitas todos los elementos, usa querySelectorAll, que veremos más adelante.
+
+⚠️ ¿Qué pasa si no encuentra el elemento?
+Si el elemento que buscas no existe en la página, querySelector te devolverá null, lo que significa que el elemento no fue encontrado. Por ejemplo:
+
+let boton = document.querySelector("#boton-inexistente");
+console.log(boton); // null
+Para evitar errores, puedes comprobar si el elemento existe antes de manipularlo:
+
+if (boton !== null) {
+   boton.textContent = "Nuevo Texto";
+} else {
+   console.log("El botón no existe.");
+}
+El método querySelector es una herramienta muy poderosa que te permite seleccionar elementos de tu página web con la misma flexibilidad de CSS. Sin embargo, recuerda que solo devuelve el primer elemento encontrado, por lo que si necesitas trabajar con varios elementos, deberás usar querySelectorAll.
+

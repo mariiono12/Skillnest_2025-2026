@@ -1,0 +1,92 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f0eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.gallery-card {
+    width: 700px;
+    background: rgb(104, 99, 81);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0d8d0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Imagen */
+.image-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.art-image {
+    width: 100%;
+    display: block;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Pie de foto */
+.caption {
+    margin-top: 15px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.caption strong {
+    font-weight: bold;
+}
+
+.caption span {
+    color: #ffffff;
+}
+
+.caption-year {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0d8d0;
+}
